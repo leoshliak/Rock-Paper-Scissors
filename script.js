@@ -37,7 +37,7 @@ function playRound(playerSelection, computerSelection){
 function getPlayerChoice(){
   let validatedInput = false;
   while(validatedInput == false){
-     const choise = prompt("Rock Paper Scissors");
+     const choise = rock;
      if(choise == null){
        continue;
      }
