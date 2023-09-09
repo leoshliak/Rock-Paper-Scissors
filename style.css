@@ -20,7 +20,7 @@ body{
     display: flex;
     flex-direction: row;
     justify-content: center;
-    gap: 250px;
+    gap: 300px;
 }
 .button-section{
     display: flex;
@@ -82,4 +82,8 @@ footer p{
     color: white;
     font-size: 20px;
     font-weight: 550;
+}
+#chs{
+    text-align: center;
+    margin-top: -5px;
 }
