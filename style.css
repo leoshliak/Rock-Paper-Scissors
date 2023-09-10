@@ -48,12 +48,13 @@ body{
     justify-content: center;
     align-items: center;
  }
- .res{
+ .res-board{
     border: 2px solid white;
     background-color: black;
     width: 400px;
     height: 150px;
     margin-bottom: 50px;
+    text-align: center;
  }
  .btn2{
     width: 250px;
