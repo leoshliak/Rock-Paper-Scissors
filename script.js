@@ -7,6 +7,8 @@ const rockBtn = document.querySelector('#rock');
  const resultBoard = document.querySelector('#res-board');
 const restartBtn = document.querySelector('#again');
 const res = document.querySelector('#res')
+const wRes = document.querySelector('#w-res');
+const lRes = document.querySelector('#l-res');
 
 const option = ["rock", "paper", "scissors"];
 let scorePlayer = 0;
@@ -59,18 +61,18 @@ function playRound(playerSelection, computerSelection){
     res.innerHTML = "It's a Tie!";
     return "It's a Tie!"
   } 
-  else if(result == "Player"){
+  else if(result == "Player" &&  scorePlayer < 5 && scoreComputer < 5){
     console.log( `You Win! ${playerSelection} beats ${computerSelection} `);
     scorePlayer++;
     res.innerHTML = `You Win! ${playerSelection} beats ${computerSelection} `;
     return `You Win! ${playerSelection} beats ${computerSelection} `
-  } 
-  else {
+  }
+  else if(result == "Computer" &&  scorePlayer < 5 && scoreComputer < 5){
     console.log(`You Lose! ${computerSelection} beats ${playerSelection}`);
     scoreComputer++;
     res.innerHTML = `You Lose! ${computerSelection} beats ${playerSelection}`;
     return `You Lose! ${computerSelection} beats ${playerSelection}`
-  } 
+  }
 }
  function checkForWinner(scorePlayer, scoreComputer){
   computerScoreResult.innerHTML = `${scoreComputer}`;
@@ -78,13 +80,20 @@ function playRound(playerSelection, computerSelection){
  console.log(`Player score: ${scorePlayer} Computer score: ${scoreComputer} `);
  if(scorePlayer >= 5){
   console.log("You Win the game!!!");
+  res.innerHTML = null;
+  wRes.innerHTML = "You Win the game!!!";
+  lRes.innerHTML = null;
   return "You Win the game!!!!"
  }
  else if(scoreComputer >= 5){
   console.log("You Lost the game)");
+  res.innerHTML = null;
+  lRes.innerHTML = "You Lost the game)";
+  wRes.innerHTML = null;
   return "You Lost the game)"
  }
  }
+
 //old js code
 
 /* const option = ["rock", "paper", "scissors"];
