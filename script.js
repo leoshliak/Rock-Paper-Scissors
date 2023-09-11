@@ -54,6 +54,9 @@ rockBtn.addEventListener('click', () => {
     playRound(playerSelection, computerSelection);
     checkForWinner(scorePlayer, scoreComputer);
     })
+    restartBtn.addEventListener('click', () =>{
+      location.reload()
+    })
 function playRound(playerSelection, computerSelection){
   const result = checkWinner(playerSelection, computerSelection);
   if (result == "Tie") {
@@ -79,18 +82,18 @@ function playRound(playerSelection, computerSelection){
   playerScoreResult.innerHTML = ` ${scorePlayer}`;
  console.log(`Player score: ${scorePlayer} Computer score: ${scoreComputer} `);
  if(scorePlayer >= 5){
-  console.log("You Win the game!!!");
+  console.log("You Won the game!!!");
   res.innerHTML = null;
-  wRes.innerHTML = "You Win the game!!!";
+  wRes.innerHTML = "You Won the game!!!";
   lRes.innerHTML = null;
-  return "You Win the game!!!!"
+  return "You Won the game!!!!"
  }
  else if(scoreComputer >= 5){
-  console.log("You Lost the game)");
+  console.log("You Lost the game :(");
   res.innerHTML = null;
-  lRes.innerHTML = "You Lost the game)";
+  lRes.innerHTML = "You Lost the game :(";
   wRes.innerHTML = null;
-  return "You Lost the game)"
+  return "You Lost the game :("
  }
  }
 
