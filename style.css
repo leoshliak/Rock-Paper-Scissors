@@ -100,3 +100,39 @@ footer p{
     color: red;
     font-weight: 600;
 }
+@media (max-width: 500px) {
+    .title {
+        font-size: 18px;
+      } 
+  
+    .score-section {
+      font-size:  15px;
+      gap: 20px;
+    }
+  
+    .button-section {
+      gap: 10px;
+    }
+  
+    .btn {
+      width: 100px;
+      height: 35px;
+      font-size: 18px;
+    }
+    #chs{
+        font-size: 18px;
+    }
+    .result{
+        font-size: 18px;
+    }
+    .res-board{
+        width: 200px;
+        height: 70px;
+    }
+    .btn2{
+        width: 150px;
+        height: 55px;
+        font-size: 18px;
+    }
+  }
+  
